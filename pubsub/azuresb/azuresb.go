@@ -64,7 +64,7 @@ import (
 	"sync"
 	"time"
 
-	common "github.com/Azure/azure-amqp-common-go/v3"
+	common "github.com/Azure/azure-amqp-common-go/v4"
 	servicebus "github.com/Azure/azure-sdk-for-go/sdk/messaging/azservicebus"
 	"github.com/Azure/go-amqp"
 	"gocloud.dev/gcerrors"
@@ -331,8 +331,8 @@ func (*topic) ErrorAs(err error, i interface{}) bool {
 
 func errorAs(err error, i interface{}) bool {
 	switch v := err.(type) {
-	case *amqp.DetachError:
-		if p, ok := i.(**amqp.DetachError); ok {
+	case *amqp.LinkError:
+		if p, ok := i.(**amqp.LinkError); ok {
 			*p = v
 			return true
 		}
@@ -533,7 +533,7 @@ func errorCode(err error) (gcerrors.ErrorCode, bool) {
 		return gcerrors.NotFound, false
 	}
 	var cond amqp.ErrCond
-	var aderr *amqp.DetachError
+	var aderr *amqp.LinkError
 	var aerr *amqp.Error
 	if errors.As(err, &aderr) {
 		if aderr.RemoteErr == nil {

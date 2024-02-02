@@ -31,15 +31,14 @@ require (
 	contrib.go.opencensus.io/exporter/aws v0.0.0-20200617204711-c478e41e60e9
 	contrib.go.opencensus.io/exporter/stackdriver v0.13.14
 	contrib.go.opencensus.io/integrations/ocsql v0.1.7
-	github.com/Azure/azure-amqp-common-go/v3 v3.2.3
-	github.com/Azure/azure-sdk-for-go v66.0.0+incompatible // indirect
+	github.com/Azure/azure-amqp-common-go/v4 v4.2.0
 	github.com/Azure/azure-sdk-for-go/sdk/azcore v1.3.1
 	github.com/Azure/azure-sdk-for-go/sdk/azidentity v1.2.1
 	github.com/Azure/azure-sdk-for-go/sdk/keyvault/azkeys v0.9.0
 	github.com/Azure/azure-sdk-for-go/sdk/keyvault/internal v0.7.1 // indirect
 	github.com/Azure/azure-sdk-for-go/sdk/messaging/azservicebus v1.2.0
 	github.com/Azure/azure-sdk-for-go/sdk/storage/azblob v1.0.0
-	github.com/Azure/go-amqp v0.18.1
+	github.com/Azure/go-amqp v1.0.4
 	github.com/Azure/go-autorest/autorest/to v0.4.0
 	github.com/GoogleCloudPlatform/cloudsql-proxy v1.33.2
 	github.com/aws/aws-sdk-go v1.44.200
@@ -60,7 +59,6 @@ require (
 	github.com/google/go-cmp v0.5.9
 	github.com/google/go-replayers/grpcreplay v1.1.0
 	github.com/google/go-replayers/httpreplay v1.1.1
-	github.com/google/martian v2.1.1-0.20190517191504-25dcb96d9e51+incompatible // indirect
 	github.com/google/uuid v1.3.0
 	github.com/google/wire v0.5.0
 	github.com/googleapis/gax-go/v2 v2.7.0
@@ -70,8 +68,8 @@ require (
 	github.com/prometheus/prometheus v0.42.0 // indirect
 	go.opencensus.io v0.24.0
 	go.uber.org/multierr v1.9.0 // indirect
-	golang.org/x/crypto v0.6.0
-	golang.org/x/net v0.6.0
+	golang.org/x/crypto v0.18.0
+	golang.org/x/net v0.20.0
 	golang.org/x/oauth2 v0.5.0
 	golang.org/x/sync v0.1.0
 	golang.org/x/xerrors v0.0.0-20220907171357-04be3eba64a2
